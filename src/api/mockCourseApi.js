@@ -63,7 +63,10 @@ class CourseApi {
         resolve(Object.assign([], courses));
       }, delay);
     });*/
-    return axios.get(url);
+    return axios.get(url,{
+      headers: {
+         'Access-Control-Allow-Origin': '*'
+      }});
   }
 
 
